@@ -34,7 +34,7 @@ class ETHTrack:
         btc_change = (btc/prev_btc-1)*100
         return [eth_change, btc_change]
 
-    def print_eth(self):
+    def print_changes(self):
         if len(self.eth_history) >= 2:
             changes = self.calculate_change(self.eth_history[-1], self.btc_history[-1],
                                                  self.eth_history[-2], self.btc_history[-2])
@@ -60,7 +60,7 @@ class ETHTrack:
             t_end = time.time() + 60
             while time.time() < t_end:
                 self.get_price()
-                self.print_eth()
+                self.print_changes()
                 sleep(1)
             self.results()
             self.eth_history.clear()
