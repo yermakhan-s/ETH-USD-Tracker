@@ -40,7 +40,7 @@ ETHTrack:
         - prev_btc: Previous price of BTC as a float.
         - Returns: A list containing the percentage changes in ETH and BTC prices.
 
-    print_eth():
+    print_changes():
         Prints the current price of ETH/USD along with the percentage change in prices compared to the previous value.
 
     results():
